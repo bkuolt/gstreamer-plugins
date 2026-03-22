@@ -48,7 +48,6 @@ class QRCodeScanner(GstBase.BaseTransform):
                
             # bbox ist ein Numpy-Array, wenn was gefunden wurde, sonst None
             if bbox is not None and len(bbox) > 0:
-                print("BB Code detected")
                 # Koordinaten in Integer umwandeln und umformen für cv2.polylines
                 pts = np.int32(bbox).reshape(-1, 1, 2)
                 # Zeichne ein grünes Rechteck ins Originalbild (RGB: 0, 255, 0)
